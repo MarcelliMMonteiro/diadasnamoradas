@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio do Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fff0f5;
+      color: #4b0082;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 2.5rem;
+      color: #c71585;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .item {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    img {
+      max-width: 200px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #a0522d;
+    }
+
+    /* Corações caindo */
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 1.5rem;
+      animation: fall linear infinite;
+      z-index: 1000;
+      color: #ff69b4;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Cardápio do Amor 💖</h1>
+
+  <img src="https://i.imgur.com/yWbJX5Z.jpg" alt="Jantar romântico" />
+
+  <div class="section">
+    <h2>Entrada</h2>
+    <p class="item">Beijos caramelizados</p>
+    <p class="item">Olhares de derreter o coração</p>
+  </div>
+
+  <img src="https://i.imgur.com/E6KpM6F.jpg" alt="Entrada amorosa" />
+
+  <div class="section">
+    <h2>Prato Principal</h2>
+    <p class="item">Abraço à la mode com risos crocantes</p>
+    <p class="item">Lasanha de lembranças boas</p>
+  </div>
+
+  <img src="https://i.imgur.com/NiA1XZq.jpg" alt="Prato principal romântico" />
+
+  <div class="section">
+    <h2>Sobremesa</h2>
+    <p class="item">Beijinhos na nuca com chantilly</p>
+    <p class="item">Fondue de elogios intermináveis</p>
+  </div>
+
+  <img src="https://i.imgur.com/6VpzA6T.jpg" alt="Sobremesa apaixonada" />
+
+  <div class="section">
+    <h2>Bebidas</h2>
+    <p class="item">Coquetel de mensagens fofas</p>
+    <p class="item">Vinho do amor eterno</p>
+  </div>
+
+  <img src="https://i.imgur.com/AvS1sdb.jpg" alt="Brinde ao amor" />
+
+  <footer>
+    Feito com 💌 para alguém muito especial<br>
+    Feliz Dia dos Namorados!
+  </footer>
+
+  <!-- Corações caindo -->
+  <script>
+    const createHeart = () => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerText = '💗';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      heart.style.fontSize = (1 + Math.random() * 2) + 'rem';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    };
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
